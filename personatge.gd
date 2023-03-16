@@ -25,7 +25,10 @@ func _process(delta):
 		direccio += Vector2.LEFT*10
 	if Input.is_action_just_pressed("saltar") and is_on_floor():
 		moviment.y = -200
+		$salt.play()
+		$Duracio.start ()
 	
+
 	if Input.is_action_pressed("ajupir"):
 		scale = Vector2(0.5,0.5)
 	else:
@@ -35,7 +38,6 @@ func _process(delta):
 	moviment += gravetat * delta
 	moviment = move_and_slide(moviment, Vector2.UP)
 	
-
 
 
 export(Texture) var nova_textura
@@ -51,4 +53,9 @@ func _on_lava_body_entered(body):
 		var mbappe = get_node("../Sprite")
 		$Icon.texture = nova_textura
 		$perdut.text = "Has perdut :("
+
 		
+
+
+func _on_Duracio_timeout():
+	$salt.stop()

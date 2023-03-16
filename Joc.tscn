@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://personatge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://paret.tscn" type="PackedScene" id=2]
@@ -11,7 +11,8 @@
 [ext_resource path="res://istockphoto-1012404208-612x612.jpg" type="Texture" id=9]
 [ext_resource path="res://mbappetrist.png" type="Texture" id=10]
 [ext_resource path="res://flecha.png" type="Texture" id=11]
-[ext_resource path="res://Sprite.tscn" type="PackedScene" id=12]
+[ext_resource path="res://5842fe21a6515b1e0ad75b3e.png" type="Texture" id=12]
+[ext_resource path="res://copa.gd" type="Script" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -46,7 +47,7 @@ scale = Vector2( 1.59531, 1.50353 )
 texture = ExtResource( 7 )
 
 [node name="personatge" parent="." instance=ExtResource( 1 )]
-position = Vector2( 75, 550 )
+position = Vector2( 2555, 696 )
 nova_textura = ExtResource( 10 )
 
 [node name="Flecha" type="Sprite" parent="personatge"]
@@ -75,8 +76,14 @@ rotation = 1.5708
 scale = Vector2( 1, 1.7 )
 
 [node name="detector" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2551, 871 )
-scale = Vector2( 3, 2 )
+position = Vector2( 2561, 861 )
+scale = Vector2( 2.184, 1.54286 )
+
+[node name="copa" type="Sprite" parent="detector"]
+position = Vector2( -29.7617, -55.7407 )
+scale = Vector2( 0.102381, 0.0896876 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
 
 [node name="lava" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2601, 1154 )
@@ -244,8 +251,7 @@ scale = Vector2( 1, 0.1 )
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="copa" parent="." instance=ExtResource( 12 )]
-
 [connection signal="body_entered" from="detector" to="personatge" method="_on_detector_body_entered"]
+[connection signal="body_entered" from="detector" to="detector/copa" method="_on_detector_body_entered"]
 [connection signal="body_entered" from="lava" to="personatge" method="_on_lava_body_entered"]
 [connection signal="timeout" from="Timer" to="personatge" method="_on_Timer_timeout"]

@@ -7,6 +7,6 @@ func _ready():
 export (Texture) var nova_textura
 
 func _on_detector_body_entered(body):
-	if body name == "copa"
-		var mbappe = get_node("../Sprite")
+	if body.name == "copa":
+		var copa = get_node("../Sprite")
 		$Sprite.texture = nova_textura
