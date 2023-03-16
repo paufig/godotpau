@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MC L Da Vinte e MC Gury - Parado no Bailão (Carlos & Adão x Mayham Remix)_8w-B8ooxngQ.mp3-650d6623b4602a2ede24de4667b445f2.mp3str"
+
+[deps]
+
+source_file="res://MC L Da Vinte e MC Gury - Parado no Bailão (Carlos & Adão x Mayham Remix)_8w-B8ooxngQ.mp3"
+dest_files=[ "res://.import/MC L Da Vinte e MC Gury - Parado no Bailão (Carlos & Adão x Mayham Remix)_8w-B8ooxngQ.mp3-650d6623b4602a2ede24de4667b445f2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

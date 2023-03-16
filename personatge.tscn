@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://personatge.gd" type="Script" id=1]
+[ext_resource path="res://85260.png" type="Texture" id=2]
+[ext_resource path="res://Label.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20.5, 29.5 )
+
+[node name="personatge" type="KinematicBody2D"]
+position = Vector2( 223, 181 )
+script = ExtResource( 1 )
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( -0.500004, 7.62939e-06 )
+scale = Vector2( 0.35, 0.333333 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = -19.0
+margin_top = -45.0
+margin_right = 21.0
+margin_bottom = -31.0
+text = "00:00"
+script = ExtResource( 3 )
+
+[node name="perdut" type="Label" parent="."]
+margin_left = -20.0
+margin_top = -61.0
+margin_right = 20.0
+margin_bottom = -47.0
+
+[node name="guanyat" type="Label" parent="."]
+margin_left = -21.0
+margin_top = -62.0
+margin_right = 19.0
+margin_bottom = -48.0

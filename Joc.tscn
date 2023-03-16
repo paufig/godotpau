@@ -1,0 +1,251 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://personatge.tscn" type="PackedScene" id=1]
+[ext_resource path="res://paret.tscn" type="PackedScene" id=2]
+[ext_resource path="res://detector.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/Kenney Blocks.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://MC L Da Vinte e MC Gury - Parado no Bailão (Carlos & Adão x Mayham Remix)_8w-B8ooxngQ.mp3" type="AudioStream" id=5]
+[ext_resource path="res://cieloazul1-k1zG-U100155473657HzH-1968x1216@RC.jpg" type="Texture" id=6]
+[ext_resource path="res://Estadios-de-Futbol.jpg" type="Texture" id=7]
+[ext_resource path="res://istockphoto-1124961361-612x612.jpg" type="Texture" id=8]
+[ext_resource path="res://istockphoto-1012404208-612x612.jpg" type="Texture" id=9]
+[ext_resource path="res://mbappetrist.png" type="Texture" id=10]
+[ext_resource path="res://flecha.png" type="Texture" id=11]
+[ext_resource path="res://Sprite.tscn" type="PackedScene" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 4 )
+
+[node name="Joc" type="Node2D"]
+light_mask = 0
+
+[node name="Cieloazul1-k1zG-U100155473657HzH-1968X1216Rc" type="Sprite" parent="."]
+position = Vector2( 1005.5, -442.5 )
+scale = Vector2( 2.906, 0.724507 )
+texture = ExtResource( 6 )
+
+[node name="Istockphoto-1124961361-612X612" type="Sprite" parent="."]
+position = Vector2( 2480, 523 )
+scale = Vector2( 4.67974, 2.58578 )
+texture = ExtResource( 8 )
+
+[node name="Istockphoto-1124961361-612X613" type="Sprite" parent="."]
+position = Vector2( -413, 525 )
+scale = Vector2( 4.67974, 2.58578 )
+texture = ExtResource( 8 )
+
+[node name="Istockphoto-1012404208-612X612" type="Sprite" parent="."]
+position = Vector2( 2449.5, 1191.25 )
+scale = Vector2( 4.69771, 0.713759 )
+texture = ExtResource( 9 )
+
+[node name="Estadios-de-Futbol" type="Sprite" parent="."]
+position = Vector2( 513.5, 319.5 )
+scale = Vector2( 1.59531, 1.50353 )
+texture = ExtResource( 7 )
+
+[node name="personatge" parent="." instance=ExtResource( 1 )]
+position = Vector2( 75, 550 )
+nova_textura = ExtResource( 10 )
+
+[node name="Flecha" type="Sprite" parent="personatge"]
+position = Vector2( 2493, -337 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 11 )
+
+[node name="paret" parent="." instance=ExtResource( 2 )]
+
+[node name="paret2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 984, 0 )
+
+[node name="paret4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1022, 600 )
+rotation = 1.5708
+scale = Vector2( 1, 1.7 )
+
+[node name="paret37" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3639, 1134 )
+rotation = 1.5708
+scale = Vector2( 1, 1.7 )
+
+[node name="paret38" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2622, 1134 )
+rotation = 1.5708
+scale = Vector2( 1, 1.7 )
+
+[node name="detector" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2551, 871 )
+scale = Vector2( 3, 2 )
+
+[node name="lava" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2601, 1154 )
+scale = Vector2( 52, 1.1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 67.0
+margin_top = 47.0
+margin_right = 180.0
+margin_bottom = 72.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.262745, 0.235294, 0.658824, 1 )
+custom_colors/font_color_shadow = Color( 0.411765, 0.972549, 0.0823529, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Mbappe :)"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 2764.0
+margin_top = -220.0
+margin_right = 3364.0
+margin_bottom = -97.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.262745, 0.235294, 0.658824, 1 )
+custom_colors/font_color_shadow = Color( 0.411765, 0.972549, 0.0823529, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "salta! 
+intenta caure al forat"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 71, 563 )
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="paret3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 109, 542 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 207, 510 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 670, 375 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 373, 140 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 652, -137 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1203, -210 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1909, -151 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2618, -118 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2478, 890 )
+scale = Vector2( 4, 0.07 )
+
+[node name="paret35" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2599, 830 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret36" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2478, 830 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret29" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2504, -176 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret30" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2361, -176 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret31" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2257, -298 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret32" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2135, -142 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret33" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2027, -232 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1793, -151 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1686, -231 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret25" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1563, -150 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1430, -223 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1297, -178 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1104, -342 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 988, -305 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 884, -229 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 775, -182 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 542, -39 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 477, 57 )
+scale = Vector2( 1, 0.07 )
+
+[node name="paret11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 509, 201 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 650, 201 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 755, 290 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 565, 429 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 445, 467 )
+scale = Vector2( 1, 0.1 )
+
+[node name="paret9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 310, 464 )
+scale = Vector2( 1, 0.1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="copa" parent="." instance=ExtResource( 12 )]
+
+[connection signal="body_entered" from="detector" to="personatge" method="_on_detector_body_entered"]
+[connection signal="body_entered" from="lava" to="personatge" method="_on_lava_body_entered"]
+[connection signal="timeout" from="Timer" to="personatge" method="_on_Timer_timeout"]
