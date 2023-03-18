@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://personatge.tscn" type="PackedScene" id=1]
 [ext_resource path="res://paret.tscn" type="PackedScene" id=2]
@@ -11,7 +11,8 @@
 [ext_resource path="res://istockphoto-1012404208-612x612.jpg" type="Texture" id=9]
 [ext_resource path="res://mbappetrist.png" type="Texture" id=10]
 [ext_resource path="res://flecha.png" type="Texture" id=11]
-[ext_resource path="res://Sprite.tscn" type="PackedScene" id=12]
+[ext_resource path="res://5842fe21a6515b1e0ad75b3e.png" type="Texture" id=12]
+[ext_resource path="res://copa.gd" type="Script" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -31,8 +32,8 @@ scale = Vector2( 4.67974, 2.58578 )
 texture = ExtResource( 8 )
 
 [node name="Istockphoto-1124961361-612X613" type="Sprite" parent="."]
-position = Vector2( -413, 525 )
-scale = Vector2( 4.67974, 2.58578 )
+position = Vector2( -385, 525 )
+scale = Vector2( 4.77124, 2.58578 )
 texture = ExtResource( 8 )
 
 [node name="Istockphoto-1012404208-612X612" type="Sprite" parent="."]
@@ -46,12 +47,12 @@ scale = Vector2( 1.59531, 1.50353 )
 texture = ExtResource( 7 )
 
 [node name="personatge" parent="." instance=ExtResource( 1 )]
-position = Vector2( 75, 550 )
+position = Vector2( 80, 569 )
 nova_textura = ExtResource( 10 )
 
 [node name="Flecha" type="Sprite" parent="personatge"]
-position = Vector2( 2493, -337 )
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( 2480, -337 )
+scale = Vector2( -0.521303, 0.355949 )
 texture = ExtResource( 11 )
 
 [node name="paret" parent="." instance=ExtResource( 2 )]
@@ -60,9 +61,9 @@ texture = ExtResource( 11 )
 position = Vector2( 984, 0 )
 
 [node name="paret4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1022, 600 )
+position = Vector2( 1025, 600 )
 rotation = 1.5708
-scale = Vector2( 1, 1.7 )
+scale = Vector2( 1, 1.71 )
 
 [node name="paret37" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3639, 1134 )
@@ -75,23 +76,34 @@ rotation = 1.5708
 scale = Vector2( 1, 1.7 )
 
 [node name="detector" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2551, 871 )
-scale = Vector2( 3, 2 )
+position = Vector2( 2561, 861 )
+scale = Vector2( 2.184, 1.54286 )
+
+[node name="copa" type="Sprite" parent="detector"]
+position = Vector2( -29.7617, -55.7407 )
+scale = Vector2( 0.102381, 0.0896876 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
 
 [node name="lava" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2601, 1154 )
-scale = Vector2( 52, 1.1 )
+position = Vector2( 2650, 1154 )
+scale = Vector2( 62.142, 1.4 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 67.0
-margin_top = 47.0
-margin_right = 180.0
-margin_bottom = 72.0
+margin_top = 370.0
+margin_right = 622.0
+margin_bottom = 682.0
+rect_scale = Vector2( 0.427169, 0.430365 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0.262745, 0.235294, 0.658824, 1 )
 custom_colors/font_color_shadow = Color( 0.411765, 0.972549, 0.0823529, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Mbappe :)"
+text = "Mbappe :)
+a -> esquerra
+d -> dreta
+space -> saltar
+shift -> encongir-se"
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 2764.0
@@ -244,8 +256,7 @@ scale = Vector2( 1, 0.1 )
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="copa" parent="." instance=ExtResource( 12 )]
-
 [connection signal="body_entered" from="detector" to="personatge" method="_on_detector_body_entered"]
+[connection signal="body_entered" from="detector" to="detector/copa" method="_on_detector_body_entered"]
 [connection signal="body_entered" from="lava" to="personatge" method="_on_lava_body_entered"]
 [connection signal="timeout" from="Timer" to="personatge" method="_on_Timer_timeout"]

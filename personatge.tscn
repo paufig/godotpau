@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://personatge.gd" type="Script" id=1]
 [ext_resource path="res://85260.png" type="Texture" id=2]
 [ext_resource path="res://Label.gd" type="Script" id=3]
+[ext_resource path="res://cartoon-jump-6462.mp3" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.5, 29.5 )
@@ -42,3 +43,11 @@ margin_left = -21.0
 margin_top = -62.0
 margin_right = 19.0
 margin_bottom = -48.0
+
+[node name="salt" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = 20.0
+
+[node name="Duracio" type="Timer" parent="."]
+
+[connection signal="timeout" from="Duracio" to="." method="_on_Duracio_timeout"]
