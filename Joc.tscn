@@ -47,11 +47,7 @@ scale = Vector2( 1.59531, 1.50353 )
 texture = ExtResource( 7 )
 
 [node name="personatge" parent="." instance=ExtResource( 1 )]
-<<<<<<< HEAD
 position = Vector2( 80, 569 )
-=======
-position = Vector2( 2555, 696 )
->>>>>>> 0201b962fd13a22ac901e2629c537e139527aa3b
 nova_textura = ExtResource( 10 )
 
 [node name="Flecha" type="Sprite" parent="personatge"]
